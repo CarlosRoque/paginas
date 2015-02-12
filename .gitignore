@@ -36,3 +36,4 @@ config/secrets.yml
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+paginas-0.1.0.gem
