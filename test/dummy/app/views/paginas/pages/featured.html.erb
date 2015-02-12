@@ -1,0 +1,5 @@
+<% @pages.each do |page| %>
+    <h3><%= page.title %></h3>
+    <div><%= page.text.html_safe %></div>
+    </tr>
+<% end %>
