@@ -1,6 +1,6 @@
 Paginas::Engine.routes.draw do
   resources :pages
-  get 'featured', to: 'pages#index', featured: true
-  get 'display/:id', to: 'pages#show', display_only: true
+  get 'featured', to: 'pages#featured'
+  get 'display/:id', to: 'pages#display', as: "display"
   root "pages#index"
 end

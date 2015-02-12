@@ -2,23 +2,20 @@ require_dependency "paginas/application_controller"
 
 module Paginas
   class PagesController < ApplicationController
-    before_action :set_page, only: [:show, :edit, :update, :destroy]
+    before_action :set_page, only: [:display,:show, :edit, :update, :destroy]
 
     def index
-      if params[:featured]
-        @pages = Page.where(featured: true)
-        render :featured
-      else
-        @pages = Page.all
-      end
+      @pages = Page.all
+    end
+    def featured
+      @pages = Page.where(featured: true)
+      render :featured
     end
 
     def show
-      if params[:display_only]
-        render :display
-      end
     end
-
+    def display
+    end
     def new
       @page = Page.new
     end
