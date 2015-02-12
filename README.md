@@ -2,7 +2,7 @@
 Paginas Gem
 ================
 
-Provides basic pages functionality to your app. Visit my [!Page](http://www.carlos-roque.com/paginas-gem/)
+Provides basic pages functionality to your app. For screenshots visit [here](http://www.carlos-roque.com/paginas-gem/)
 
 Installing
 -----------
