@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/paginas.svg)](http://badge.fury.io/rb/paginas)
 Paginas Gem
 ================
 
