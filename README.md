@@ -1,4 +1,4 @@
-Simple Pages Gem
+Paginas Gem
 ================
 
 Provides basic pages functionality to your app
@@ -7,23 +7,23 @@ Installing
 -----------
 Add these to your Gemfile
 ```ruby
-gem "simple_pages"
+gem "paginas"
 gem "tinymce-rails"
 ```
 
 configure your routes file
 config/routes.rb
 ```ruby
-mount SimplePages::Engine, at: "/sp"
+mount Paginas::Engine, at: "/paginas"
 ```
 and your application.js
 app/assets/javascript/application.js
 ```ruby
-//= require simple_pages
+//= require paginas
 ```
 set up the database by running
 ```bash
-rake simple_pages:install:migrations
+rake paginas:install:migrations
 ```
 and
 ```bash
@@ -46,5 +46,5 @@ yourappurl/sp/display/:id
 
 finally, if you want to modify the default views you can run
 ```bash
-rails generate simple_pages:views
+rails generate paginas:views
 ```
