@@ -145,3 +145,10 @@ class PagesController < Paginas::PagesController
   before_action :authenticate_user!, only: [:show,:edit,:new,:destroy,:update,:create]
 end
 ```
+Turbolinks workaround
+======================
+If you are using turbolinks, you will notice that sometimes TinyMCE doesn't show to work around this problem add this to your app/assets/application.js
+```js
+$(document).on('page:receive',function(){tinymce.remove()});
+```
+I used the instructions from this issue [GitHub](https://github.com/spohlenz/tinymce-rails/issues/145#issuecomment-49307568)
