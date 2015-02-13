@@ -52,7 +52,7 @@ module Paginas
       end
 
       def page_params
-        params.require(:page).permit(:title, :text, :featured)
+        params.require(:page).permit(:title, :text, :featured,:show_title)
       end
   end
 end

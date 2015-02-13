@@ -1,2 +1,2 @@
-<h3><%= @page.title %> </h3>
+<%=(@page.show_title)? "<h3>#{@page.title}</h3>".html_safe : "" %> 
 <div><%= @page.text.html_safe %></div>
