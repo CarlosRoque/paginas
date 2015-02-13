@@ -2,6 +2,7 @@ require_dependency "paginas/application_controller"
 module Paginas
   class PagesController < ApplicationController
     before_action :set_page, only: [:display,:show, :edit, :update, :destroy]
+    before_action :set_categories, only: [:edit,:new,:update,:destroy]
     def index
       @pages = Page.all
     end
@@ -39,11 +40,14 @@ module Paginas
     end
 
     private
-      def set_page
-        @page = Page.find(params[:id])
-      end
-      def page_params
-        params.require(:page).permit(:title, :text, :featured,:show_title)
-      end
+    def set_categories
+      @categories = Category.all
+    end
+    def set_page
+      @page = Page.find(params[:id])
+    end
+    def page_params
+      params.require(:page).permit(:title, :text, :featured,:show_title,:category_id)
+    end
   end
 end

@@ -4,7 +4,7 @@ class CreatePaginasPages < ActiveRecord::Migration
       t.string :title
       t.text :text
       t.boolean :featured, :default => false
-      
+
       t.timestamps null: false
     end
   end

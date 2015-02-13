@@ -35,6 +35,7 @@ module Paginas
           end
         else
           view_directory :pages
+          view_directory :categories
         end
       end
 
@@ -63,7 +64,7 @@ module Paginas
 
       # Override copy_views to just copy mailer and shared.
       def copy_views
-        view_directory :shared
+        # view_directory :shared
       end
     end
 

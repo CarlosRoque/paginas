@@ -5,6 +5,11 @@ test/dummy/db/*.sqlite3-journal
 test/dummy/log/*.log
 test/dummy/tmp/
 test/dummy/.sass-cache
+test/dummy2/db/*.sqlite3
+test/dummy2/db/*.sqlite3-journal
+test/dummy2/log/*.log
+test/dummy2/tmp/
+test/dummy2/.sass-cache
 *.gem
 *.rbc
 capybara-*.html
