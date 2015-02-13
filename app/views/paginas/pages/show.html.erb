@@ -2,6 +2,8 @@
 
 <h3><%= @page.title %> </h3>
 
+<label>Page Link</label>
+<%= text_field_tag :link, display_url(@page), :readonly => 'readonly' %>
 <div><%= @page.text.html_safe %></div>
 
 <%= link_to 'Edit', edit_page_path(@page) %> |

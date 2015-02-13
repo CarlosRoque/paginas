@@ -147,7 +147,7 @@ end
 ```
 Turbolinks workaround
 ======================
-If you are using turbolinks, you will notice that sometimes TinyMCE doesn't show to work around this problem add this to your app/assets/application.js
+If you are using turbolinks, you will notice that sometimes TinyMCE doesn't show. To work around this problem add this to your app/assets/application.js
 ```js
 $(document).on('page:receive',function(){tinymce.remove()});
 ```
