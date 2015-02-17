@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% opts = {:item_style => '<span class="[active]">[link]</span>',:active_class => 'active'}%>
 <div id="menu"><%= paginas_menu_helper_by_pages({'Home'=>1,'featured'=>2})%></div>
 <div id="menu2"><%= paginas_menu_helper_by_cat(3)%></div>
+<div id="menu3"><%= paginas_menu_helper_by_pages({'Home'=>1,'featured'=>2},opts)%></div>
+<div id="menu4"><%= paginas_menu_helper_by_cat(3,opts)%></div>
 
 <%= yield %>
 

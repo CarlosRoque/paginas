@@ -13,3 +13,4 @@
  *= require_tree .
  *= require_self
  */
+.active {font-weight: bold; font-size: 15pt;}

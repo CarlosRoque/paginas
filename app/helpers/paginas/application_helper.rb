@@ -5,18 +5,28 @@ module Paginas
       options[:item_separator] ||= " | "
       options[:group_style] ||= "[items]"
       options[:active_class] ||= ""
+      options[:controller] ||= 'paginas/pages'
+      options[:action] ||= 'display'
 
       output = ''
       separator = ''
       ids.each do |key,id|
-        output += separator
-        output += options[:item_style].gsub(/\[link\]/, link_to(key ,display_path(id)))
+        item = ''
+        item += separator
+        item += options[:item_style].gsub(/\[link\]/, link_to(key ,display_path(id)))
+
+        active = ''
+        if params[:controller] == options[:controller] && params[:action] == options[:action] && params[:id] == id.to_s
+          active = options[:active_class]
+        end
+        item = item.gsub(/\[active\]/, active)
+        output += item
+
         if separator == ''
           separator= options[:item_separator]
         end
     end
       output = options[:group_style].gsub(/\[items\]/, output)
-      output = output.gsub(/\[active\]/, output)
 
       return output.html_safe
     end
@@ -25,18 +35,27 @@ module Paginas
       options[:item_separator] ||= " | "
       options[:group_style] ||= "[items]"
       options[:active_class] ||= ""
+      options[:controller] ||= 'paginas/pages'
+      options[:action] ||= 'display'
 
       output = ''
       separator = ''
       Category.find(catid).pages.each do |page|
-        output += separator
-        output += options[:item_style].gsub(/\[link\]/, link_to(page.title ,display_path(page.id)))
+        item = ''
+        item += separator
+        item += options[:item_style].gsub(/\[link\]/, link_to(page.title ,display_path(page.id)))
+
+        active = ''
+        if params[:controller] == options[:controller] && params[:action] == options[:action] && params[:id] == page.id.to_s
+          active = options[:active_class]
+        end
+        item = item.gsub(/\[active\]/, active)
+        output += item
         if separator == ''
           separator= options[:item_separator]
         end
       end
       output = options[:group_style].gsub(/\[items\]/, output)
-      output = output.gsub(/\[active\]/, output)
 
       return output.html_safe
     end
