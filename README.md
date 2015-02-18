@@ -27,6 +27,7 @@ These isntructions assume you already have rolify and CanCan OR Devise OR all th
 * [Devise](https://github.com/CarlosRoque/paginas/wiki/Devise)
 * [Rolify,CanCan and Devise](https://github.com/CarlosRoque/paginas/wiki/Rolify-and-CanCan-and-Devise)
 * [Help the helpers](https://github.com/CarlosRoque/paginas/wiki/Menu-helpers-when-using-overridden-controllers)
+* [Namespacing the controllers](https://github.com/CarlosRoque/paginas/wiki/Namespacing-paginas-controllers)  
 
 Known Issues
 ---------------------
