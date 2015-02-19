@@ -15,6 +15,7 @@ Getting Started
 Menu Link Markup Generation
 ---------------------------
 If you want to generate markup for your menu, Paginas provides two helpful helpers for your view. You can either pass a hash, where the key will be the name of the menu item and the value is the id of the page you want to link to, or a category id.
+* [Add the helpers to your app](https://github.com/CarlosRoque/paginas/wiki/Including-Paginas-Helpers-in-your-app)
 * [paginas_menu_helper_by_pages](https://github.com/CarlosRoque/paginas/wiki/paginas_menu_helper_by_pages%28-ids,-options-=-%7B%7D-%29)
 * [paginas_menu_helper_by_cat](https://github.com/CarlosRoque/paginas/wiki/paginas_menu_helper_by_cat%28catid,options-=-%7B%7D%29)
 * [Overridden Controllers](https://github.com/CarlosRoque/paginas/wiki/Menu-helpers-when-using-overridden-controllers)
