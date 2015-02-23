@@ -40,19 +40,22 @@ module Paginas
 
       output = ''
       separator = ''
-      Category.find(catid).pages.each do |page|
-        item = ''
-        item += separator
-        item += options[:item_style].gsub(/\[link\]/, link_to(page.title ,display_path(page.id)))
+      cats = Category.where(:id => catid).first
+      if !cats.blank?
+        cats.pages.each do |page|
+          item = ''
+          item += separator
+          item += options[:item_style].gsub(/\[link\]/, link_to(page.title ,display_path(page.id)))
 
-        active = ''
-        if params[:controller] == options[:controller] && params[:action] == options[:action] && params[:id] == page.id.to_s
-          active = options[:active_class]
-        end
-        item = item.gsub(/\[active\]/, active)
-        output += item
-        if separator == ''
-          separator= options[:item_separator]
+          active = ''
+          if params[:controller] == options[:controller] && params[:action] == options[:action] && params[:id] == page.id.to_s
+            active = options[:active_class]
+          end
+          item = item.gsub(/\[active\]/, active)
+          output += item
+          if separator == ''
+            separator= options[:item_separator]
+          end
         end
       end
       output = options[:group_style].gsub(/\[items\]/, output)

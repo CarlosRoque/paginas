@@ -3,9 +3,10 @@
 if( typeof jQuery != 'undefined')
 {
 	$(document).on('page:receive',function(){
-		tinymce.remove();
+
 	});
 	$(document).ready(function(){
+		tinymce.remove();
 		tinyMCE.init({
 		selector: "textarea.tinymce"
 		});
@@ -14,6 +15,7 @@ if( typeof jQuery != 'undefined')
 else
 {
 	document.addEventListener("DOMContentLoaded", function(event) {
+		tinymce.remove();
 		tinyMCE.init({
 		selector: "textarea.tinymce"
 		});
